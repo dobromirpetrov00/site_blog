@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="large.css" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <title>D&G</title>
+  </head>
+
+  <body class="fontss">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+    <div id="root"></div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      var mybutton = document.getElementById("myBtn");
+
+      function getScreenWidth() {
+        scrWdth = window.innerWidth;
+        return scrWdth;
+      }
+
+      window.onresize = function () {
+        getScreenWidth();
+      };
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 150 ||
+          document.documentElement.scrollTop > 150
+        ) {
+          mybutton.style.opacity = 1;
+          mybutton.style.visibility = "visible";
+          head_top.style.backgroundColor = "#b6b4b4";
+          head_top.style.height = "62px";
+          header_logo.style.top = "-20px";
+          soc_icons_header_ig.style.margin = "23px 7px 0px 5px";
+          soc_icons_header_fb.style.margin = "23px 7px 0px 5px";
+          soc_icons_header_tw.style.margin = "23px 7px 0px 5px";
+          soc_icons_header_ig.style.top = "-17px";
+          soc_icons_header_fb.style.top = "-17px";
+          soc_icons_header_tw.style.top = "-17px";
+          nav_menu_home.style.top = "-40px";
+          nav_menu_about_us.style.top = "-40px";
+          nav_menu_contact.style.top = "-40px";
+        } else {
+          getScreenWidth();
+          var scrWd = getScreenWidth();
+          if (scrWd < 681) {
+            head_top.style.backgroundColor = "#b6b4b4";
+            head_top.style.height = "62px";
+
+            soc_icons_header_ig.style.margin = "23px 7px 0px 5px";
+            soc_icons_header_fb.style.margin = "23px 7px 0px 5px";
+            soc_icons_header_tw.style.margin = "23px 7px 0px 5px";
+            soc_icons_header_ig.style.top = "-17px";
+            soc_icons_header_fb.style.top = "-17px";
+            soc_icons_header_tw.style.top = "-17px";
+            nav_menu_home.style.top = "-40px";
+            nav_menu_about_us.style.top = "-40px";
+            nav_menu_contact.style.top = "-40px";
+
+            header_logo.style.top = "-20px";
+          } else {
+            head_top.style.backgroundColor = "transparent";
+            head_top.style.height = "0";
+
+            soc_icons_header_ig.style.margin = "40px 7px 0px 5px";
+            soc_icons_header_fb.style.margin = "40px 7px 0px 5px";
+            soc_icons_header_tw.style.margin = "40px 7px 0px 5px";
+            soc_icons_header_ig.style.top = "0";
+            soc_icons_header_fb.style.top = "0";
+            soc_icons_header_tw.style.top = "0";
+            nav_menu_home.style.top = "-6px";
+            nav_menu_about_us.style.top = "-6px";
+            nav_menu_contact.style.top = "-6px";
+
+            header_logo.style.top = "0";
+          }
+
+          mybutton.style.opacity = 0;
+          mybutton.style.visibility = "hidden";
+        }
+      }
+
+      // click on the button = scroll to the top
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
