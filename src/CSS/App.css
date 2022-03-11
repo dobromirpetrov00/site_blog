@@ -553,18 +553,6 @@ img {
   margin: 10px 0px;
 }
 
-.current_mobile .home {
-  /* padding-left: 180px; */
-}
-
-.current_mobile .ab_us {
-  /* padding-left: 165px; */
-}
-
-.current_mobile .cont {
-  /* padding-left: 163px; */
-}
-
 .fa {
   display: none;
   font: normal normal normal 14px/1 FontAwesome;
